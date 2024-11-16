@@ -14,7 +14,9 @@ app.use(
       optionsSuccessStatus: 204,
   })
 );
-
+app.use(cors({
+  origin: 'https://contacts-management7.netlify.app'
+}));
 app.use(express.json());  // Middleware for JSON parsing
 
 // Use the contact routes under /api/contacts path
